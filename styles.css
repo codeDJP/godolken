@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #e0e0e0; /* Light gray text for readability */
+    background-color: #082C2A; /* Dark teal background */
+    text-align: -webkit-center; /* Centering text globally where applicable */
+}
+
+/* Header */
+header {
+    background-color: #0A3A38; /* Slightly lighter teal for header */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Adjusted for even spacing */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+    object-fit: contain; /* Ensures logo scales properly */
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default */
+}
+
+.nav-toggle-label {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #e0e0e0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    bottom: -8px;
+}
+
+.nav-toggle:checked + .nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .nav-toggle-label span::after {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around; /* Evenly space nav items */
+    align-items: center; /* Center vertically */
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #009F97; /* Branding color for hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 159, 151, 0.8), rgba(0, 159, 151, 0.5)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Already present, kept for clarity */
+    justify-content: space-around; /* Adjusted for spacing */
+    text-align: -webkit-center; /* Center text */
+    color: #fff;
+    padding: 80px 20px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #009F97;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center; /* Already present, kept for clarity */
+    justify-content: space-around; /* Space content within button */
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+    background-color: #007f77;
+    transform: scale(1.05);
+}
+
+.contact-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1rem;
+    justify-content: space-around; /* Evenly space buttons */
+    align-items: center; /* Center buttons horizontally */
+	flex-wrap: wrap;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0A3A38;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: -webkit-center; /* Center text within sections */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #009F97;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: space-around; /* Space cards evenly */
+}
+
+.card {
+    background-color: #123635;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: -webkit-center; /* Center text in cards */
+    color: #e0e0e0;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #009F97;
+}
+
+/* Portfolio Section (Elfsight Widget) */
+#portfolio {
+    text-align: -webkit-center; /* Already centered, adjusted for consistency */
+}
+
+.elfsight-app-05bd94a1-a7b7-4b0c-9edc-eb0c27ab804a {
+    margin-top: 20px;
+    object-fit: contain; /* Ensure widget scales appropriately */
+}
+
+/* How We Work */
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; /* Space steps evenly */
+    align-items: center; /* Center steps vertically */
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    background-color: #123635;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    text-align: -webkit-center; /* Center text in steps */
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+/* Terms & Hours Section */
+.terms-hours {
+    margin-top: 40px;
+    background-color: #123635; /* Matches card/step background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: -webkit-center; /* Center text */
+    justify-content: space-around; /* Space content evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.terms-hours h3 {
+    font-size: 1.5rem;
+    color: #009F97; /* Branding color */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.terms-hours dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Key on left, value on right */
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terms-hours dt {
+    font-weight: 600;
+    color: #e0e0e0;
+    text-align: left; /* Left-align terms for readability */
+    padding: 10px;
+    background-color: #1A4947; /* Slightly darker shade */
+    border-radius: 5px 0 0 5px; /* Rounded left side */
+}
+
+.terms-hours dd {
+    margin: 0;
+    padding: 10px;
+    background-color: #0A3A38; /* Matches section background */
+    border-radius: 0 5px 5px 0; /* Rounded right side */
+    transition: background-color 0.3s ease;
+}
+
+.terms-hours dd:hover {
+    background-color: #007f77; /* Hover effect matching button */
+}
+
+/* Footer */
+footer {
+    background: #082C2A;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e0e0;
+    text-align: -webkit-center; /* Center footer text */
+    padding: 20px 0;
+    width: 100%;
+    font-size: 0.85em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer2 {
+    font-size: .8em;
+    opacity: 0.8;
+}
+
+.footertext {
+    color: #ffcf00;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footertext:hover {
+    color: #a7d707;
+}
+
+.footertext::after {
+    content: '✨';
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footertext:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default, shown with JS or scroll */
+    padding: 10px 15px;
+    z-index: 1000;
+    justify-content:
