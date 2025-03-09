@@ -145,6 +145,7 @@ h2 {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+	align-items: center;
 }
 
 .step {
@@ -268,7 +269,7 @@ footer p { margin: 5px 0; }
 
     h2 { font-size: 2rem; }
     .services-grid { grid-template-columns: 1fr; padding: 15px; }
-    .process-steps { flex-direction: column; padding: 15px; }
+    .process-steps { flex-direction: column; padding: 15px; align-items: center;}
     .terms-hours dl { grid-template-columns: 1fr; }
     .terms-hours dt, .terms-hours dd { border-radius: 5px; text-align: center; }
     #back-to-top { display: block; right: 10px; bottom: 10px; }
